@@ -1,0 +1,15 @@
+ul.board-list {
+    width: 100%;
+    list-style: none;
+    display: grid;
+}
+
+ul.board-list li header {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+ul.board-list li span {
+    font-size: 15px;
+    color: #999;
+}
