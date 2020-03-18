@@ -13,6 +13,8 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 }); 
 
+mongoose.set('useFindAndModify', false);
+
 app.use(cors());
 app.use(express.json());
 app.use(routes);

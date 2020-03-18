@@ -27,5 +27,26 @@ module.exports = {
         });
 
         return res.json(item);
+    },
+
+    async update(req, res, next) {
+        const { item_id } = req.headers;
+
+        const item = await Item.findById({ _id: item_id });
+
+        Item.findByIdAndUpdate({ _id: item_id }, { done: !item.done }).then(function(){
+            Item.findOne({ _id: item_id }).then(function(item){
+                res.send(item);
+            });
+        }).catch(next);
+    },
+
+    async destroy(req, res, next){
+        const { item_id } = req.headers;
+
+        Item.findByIdAndRemove({ _id: item_id }).then(function(item){
+            res.send(item);
+        }).catch(next);
     }
+        
 }
