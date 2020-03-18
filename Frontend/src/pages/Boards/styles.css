@@ -7,9 +7,45 @@ ul.board-list {
 ul.board-list li header {
     margin-bottom: 10px;
     font-size: 18px;
+    color: #333
 }
 
 ul.board-list li span {
     font-size: 15px;
     color: #999;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.delBtn {
+    margin-left: 10px;
+    float: right;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 1px 6px;
+    font-weight: bold;
+    color: #d44c4c;
+    cursor: pointer;
+    background: #EEE;
+}
+
+.delBtn:hover {
+    color: #EEE;
+    background: #d44c4c;
 }

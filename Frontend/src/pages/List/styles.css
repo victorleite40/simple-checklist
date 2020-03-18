@@ -1,0 +1,62 @@
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+ul.item-list {
+    width: 100%;
+    list-style: none;
+    display: grid;
+}
+
+ul.item-list li header {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333
+}
+
+.doneBtn {
+    float: right;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 1px 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.delBtn {
+    margin-left: 10px;
+    float: right;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 1px 6px;
+    font-weight: bold;
+    color: #d44c4c;
+    cursor: pointer;
+    background: #EEE;
+}
+
+.delBtn:hover {
+    color: #EEE;
+    background: #d44c4c;
+}
+
+.backBtn {
+    border: 0px;
+    border-radius: 2px;
+    height: 35px;
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #eeeeee;
+    color: #555;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .backBtn:hover {
+    background: #e2e2e2;
+  }
+  

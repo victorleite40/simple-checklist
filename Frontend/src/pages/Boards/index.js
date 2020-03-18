@@ -6,7 +6,7 @@ import createBtn from '../../assets/correct.svg'
 
 import './styles.css';
 
-export default function Dashboard({ history }) {
+export default function Boards({ history }) {
     const [boards, setBoards] = useState([]);
     const [name, setName] = useState('');
 
@@ -29,16 +29,25 @@ export default function Dashboard({ history }) {
         window.location.reload(); 
     }
 
+    async function deleteBoard(board_id) {
+        await api.delete('/boards',{
+            headers: { board_id }
+        });
+
+        window.location.reload(); 
+    }
+
     return (
-    <>
+    <>        
         <ul className="board-list">
             {boards.map(board => (
                 <li key={board._id}>
-                    <header>{board.name}</header>
+                    <button className="delBtn" onClick={() => deleteBoard(board._id)} >x</button>
+                    <Link to={`/boards/${board._id}`}><header>{board.name}</header></Link> 
                 </li>
             ))}
         </ul>
-
+        
         <form onSubmit={handleSubmit}>
             <label htmlFor="name"></label>
             <input 

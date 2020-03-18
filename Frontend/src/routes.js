@@ -11,7 +11,7 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact component={Login} />
                 <Route path="/boards" exact component={Boards} />
-                <Route path="/boards/:board_id" exact component={List} />
+                <Route path="/boards/:board_id" exact component={List} children={<List />} />
             </Switch>
         </BrowserRouter>
     );
