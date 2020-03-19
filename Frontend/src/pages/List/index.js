@@ -14,8 +14,10 @@ export default function List({ history }) {
     
     useEffect(() => {
         async function loadBoard() {
-            const response = await api.get('/boards');
-
+            const response = await api.get('/boards/:board_id/name', {
+                headers: { board_id }
+            });
+            
             setBoards(response.data)
         }
         
@@ -64,7 +66,8 @@ export default function List({ history }) {
             <button className="backBtn" type="submit">{`< All Boards`}</button>
         </Link>
 
-        {/* {boards.map(board => <h1>{board.name}</h1>)} */}
+        <h1>{boards}</h1>
+
         <ul className="item-list">
             {items.map(item => (
                 <li key={item._id}>
