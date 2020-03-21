@@ -73,7 +73,7 @@ export default function List({ history }) {
                 <li key={item._id}>
                     <button className="delBtn" onClick={() => deleteTask(item._id)} >x</button>
                     <button className="doneBtn" onClick={() => handleDone(item._id)} style={item.done ? {background: "#7ed44c"} : {background: "#d44c4c"}}>{item.done ? `done` : `pending`}</button>
-                    <header>{item.task}</header>
+                    <header style={item.done ? {textDecoration: "line-through"} : { }} >{item.task}</header>
                 </li>
             ))}
         </ul>
