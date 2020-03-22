@@ -2,11 +2,13 @@
 A simple Checklist application made with NodeJS in Backend and ReactJS in Frontend.
 
 ## To do
+- ~~Boards backend;~~
+- ~~Items backend;~~
 - ~~Boards frontend;~~
 - ~~List frontend;~~
 - ~~Board title;~~
 - ~~Line through to done tasks;~~
-- Login backend;
-- Login frontend;
+- Sessions backend;
+- Login page in frontend;
 
-### Thank's for waching!
+### Thanks for waching!
