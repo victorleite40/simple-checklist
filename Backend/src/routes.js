@@ -2,8 +2,12 @@ const express = require('express');
 
 const BoardController = require('./controllers/BoardController');
 const ItemController = require('./controllers/ItemController');
+const SessionsController = require('./controllers/SessionsController');
 
 const routes = express.Router();
+
+routes.post('/signin', SessionsController.signin);
+routes.post('/login', SessionsController.login);
 
 routes.get('/boards', BoardController.index);
 routes.post('/boards', BoardController.store);
