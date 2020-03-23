@@ -1,0 +1,21 @@
+.signForm {
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.btnSign {
+    border: 0px;
+    border-radius: 2px;
+    height: 42px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #7ed44c;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btnSign:hover {
+    background: #69bb3a;
+}
