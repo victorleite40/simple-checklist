@@ -31,7 +31,7 @@ export default function List({ history }) {
 
         loadBoard();
         loadItems();
-    }, []);
+    }, [items]);
 
     async function handleSubmit(event) {
         event.preventDefault();        
@@ -41,7 +41,7 @@ export default function List({ history }) {
                 headers: { board_id }
             });
 
-            window.location.reload(); 
+            setTask('');
         }
     }
 
@@ -49,15 +49,12 @@ export default function List({ history }) {
         await api.put('/boards/:board_id', {}, { 
             headers: { item_id }
         });
-
-        window.location.reload(); 
     }
 
     async function deleteTask(item_id) {
         await api.delete('/boards/:board_id',{
             headers: { item_id }
-        });
-        window.location.reload(); 
+        })
     }
 
     return (
@@ -73,7 +70,7 @@ export default function List({ history }) {
                 <li key={item._id}>
                     <button className="delBtn" onClick={() => deleteTask(item._id)} >x</button>
                     <button className="doneBtn" onClick={() => handleDone(item._id)} style={item.done ? {background: "#7ed44c"} : {background: "#d44c4c"}}>{item.done ? `done` : `pending`}</button>
-                    <header style={item.done ? {textDecoration: "line-through"} : { }} >{item.task}</header>
+                    <header style={item.done ? {textDecoration: "line-through", color: "#AAA"} : { }} >{item.task}</header>
                 </li>
             ))}
         </ul>

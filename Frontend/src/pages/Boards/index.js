@@ -18,7 +18,7 @@ export default function Boards({ history }) {
         }
 
         loadBoards();
-    }, []);
+    }, [boards]);
 
 
     async function handleSubmit(event) {
@@ -26,7 +26,7 @@ export default function Boards({ history }) {
 
         await api.post('/boards', { name });
 
-        window.location.reload(); 
+        setName('');
     }
 
     async function deleteBoard(board_id) {
@@ -34,7 +34,6 @@ export default function Boards({ history }) {
             headers: { board_id }
         });
 
-        window.location.reload(); 
     }
 
     return (
