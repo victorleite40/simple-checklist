@@ -10,7 +10,7 @@ A simple Checklist application made with NodeJS in Backend and ReactJS in Fronte
 - ~~List frontend;~~
 - ~~Board title;~~
 - ~~Line through to done tasks;~~
-- Sessions backend;
+- ~~Sessions backend;~~
 - Login page in frontend;
 
 ### Thanks for waching!
