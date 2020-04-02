@@ -63,7 +63,7 @@ export default function List({ history }) {
             <button className="backBtn" type="submit">{`< All Boards`}</button>
         </Link>
 
-        <h1>{boards}</h1>
+        <h1 contentEditable="true" placeholder="Board Title" >{boards}</h1>
 
         <ul className="item-list">
             {items.map(item => (
