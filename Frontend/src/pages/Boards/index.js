@@ -38,6 +38,7 @@ export default function Boards({ history }) {
 
     return (
     <>        
+        <h1>All Boards</h1>
         <ul className="board-list">
             {boards.map(board => (
                 <li key={board._id}>
